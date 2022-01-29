@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Parking</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center" id="header">
+                   <h1> Parking Lot Management System</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center mb-">
+                    <h2 class="register">Registration Form</h2>
+                    <form action="save.php" method="post">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="owner">Vehicle Owner Name:</span>
+                        </div>
+                        <input type="text" name="owner_name" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> Vehicle Name:</span>
+                        </div>
+                        <input type="text" name="vehicle_name" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> Vehicle Number:</span>
+                        </div>
+                        <input type="text" name="vehicle_number" class="form-control">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> Entry Date:</span>
+                        </div>
+                        <input type="date" name="entry_date" class="form-control">
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Exit Date:</span>
+                        </div>
+                        <input type="date" name="exit_date" class="form-control">
+                    </div>
+                   <input type="submit" onclick="click()" class="btn btn-primary mt-3">
+                   </form>
+                </div>
+               
+                <div class="col-md-6">
+                    <img src="images/car.jpg" class="car" style="width: 1000px; height: 480px; " alt="car picture">
+                </div>
+            </div>
+        </div> 
+             
+    </div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="register1">All Vehicle Records</h2>
+                </div>
+            </div>
+            <div class="row">
+               <div class="col-md-12">
+                   <div class="input-group">
+                       <div class="input-group-prepend">
+                           <span class="input-group-text" >Search</span>
+                       </div>
+                        <input type="text" class="form-control" onkeyup="search()" id="text" placeholder="Search Vehicle Details">
+                   </div>
+                   
+                <table class="table table-striped" id="table" >
+                        <thead>
+                        <tr>
+                            <th>Owner Name</th>
+                            <th>Vehicle Name</th>
+                            <th>Vehicle Number</th>
+                            <th>Entry Date</th>
+                            <th>Exit Date</th>
+                            <th>Delete Record</th>
+                        </tr>
+                    </thead>
+                    <tbody>                      
+                        <tr>
+                            <td>abhishek kumar</td>
+                            <td>suzuki</td>
+                            <td>UP 83 A 8090 </td>
+                            <td> 25/09/2021 </td>
+                            <td>28/09/2021</td>
+                            <td><a href="delete-inline.php">Delete</a></td>
+                        </tr>  
+                        <tr>
+                            <td>mrudula boliseety</td>
+                            <td>BMW</td>
+                            <td>UP 23 A 6790 </td>
+                            <td> 27/08/2021 </td>
+                            <td>31/08/2021</td>
+                            <td><a href="delete-inline.php">Delete</a></td>
+                            <tr>
+                                <td>Ravi</td>
+                                <td>Honda</td>
+                                <td>kt 83 A 5090 </td>
+                                <td> 25/04/2021 </td>
+                                <td>28/04/2021</td>
+                                <td><a href="delete-inline.php">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Bhagavan</td>
+                                <td>toyota</td>
+                                <td>TN 56 D 8090 </td>
+                                <td> 25/10/2021 </td>
+                                <td>28/10/2021</td>
+                                <td><a href="delete-inline.php">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>Chiranjivi</td>
+                                <td>Lambargini</td>
+                                <td>TS 4J A 2870 </td>
+                                <td> 25/04/2021 </td>
+                                <td>28/04/2021</td>
+                                <td><a href="delete-inline.php">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>krishna teja</td>
+                                <td>suzuki</td>
+                                <td>AP 83 D 6290 </td>
+                                <td> 05/06/2021 </td>
+                                <td>204/06/2021</td>
+                                <td><a href="delete-inline.php">Delete</a></td>
+                            </tr>
+                        </tr>
+                    </tbody>
+                </table>          
+               </div>
+            </div>
+        </div>
+    </section>
+    <script>       
+    </script>
+</body>
+</html>
